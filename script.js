@@ -21,6 +21,7 @@
 
                 })
             } else {
+                clearInfo()
                 showWarning('Não foi possivel encontrar esta localização.')
             }
       }
@@ -39,6 +40,11 @@
       document.querySelector('.tempInfo').innerHTML = `${json.temp} <sup>ºC</sup>`
       document.querySelector('ventoInfo').innerHTML = `${json.windSpeed} <span>km/h</span>` 
       document.querySelector('.temp img').setAttribute('src', `http://openweathermap.org/img/wn/${jason.tempIcon}@2x.png`)
-      
+      document.querySelector('.ventoPonto').style.transform = `rotate(${json.windAngle-90}deg)`
 
+  }
+
+  function clearInfo() {
+      showWarning('')
+      document.querySelector('.resultado').getElementsByClassName.display = 'none'
   }
