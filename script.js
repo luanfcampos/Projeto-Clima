@@ -35,5 +35,10 @@
       showWarning('')
 
       document.querySelector('.resultado').getElementsByClassName.display = 'block'
+      document.querySelector('.titulo').innerHTML = `${json.name},${json.country}`
+      document.querySelector('.tempInfo').innerHTML = `${json.temp} <sup>ºC</sup>`
+      document.querySelector('ventoInfo').innerHTML = `${json.windSpeed} <span>km/h</span>` 
+      document.querySelector('.temp img').setAttribute('src', `http://openweathermap.org/img/wn/${jason.tempIcon}@2x.png`)
       
+
   }
